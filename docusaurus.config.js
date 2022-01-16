@@ -25,7 +25,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://infonomic.github.io/redux-saga-router',
+          editUrl: 'https://github.com/infonomic/redux-saga-router',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -51,7 +51,7 @@ const config = {
             label: 'Docs',
           },
           {
-            href: 'https://infonomic.github.io/redux-saga-router',
+            href: 'https://github.com/infonomic/redux-saga-router',
             label: 'GitHub',
             position: 'right',
           },
