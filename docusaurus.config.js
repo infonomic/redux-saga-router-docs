@@ -15,6 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'infonomic', // Usually your GitHub org/user name.
   projectName: 'redux-saga-router ', // Usually your repo name.
+  trailingSlash: false,
 
   presets: [
     [
