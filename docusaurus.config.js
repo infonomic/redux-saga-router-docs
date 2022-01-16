@@ -9,7 +9,7 @@ const config = {
   title: 'Infonomic - Redux-Saga Router',
   tagline: 'A redux-saga-based router.',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/redux-saga-router/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
