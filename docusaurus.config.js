@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Infonomic - Redux-Saga Router',
   tagline: 'A redux-saga-based router.',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://infonomic.github.io/redux-saga-router',
   baseUrl: '/redux-saga-router/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -25,7 +25,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://infonomic.github.io/redux-saga-router',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -51,7 +51,7 @@ const config = {
             label: 'Docs',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://infonomic.github.io/redux-saga-router',
             label: 'GitHub',
             position: 'right',
           },
