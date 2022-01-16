@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Infonomic - Redux-Saga Router',
   tagline: 'A redux-saga-based router.',
-  url: 'https://infonomic.github.io/redux-saga-router',
+  url: 'https://infonomic.github.io',
   baseUrl: '/redux-saga-router/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
