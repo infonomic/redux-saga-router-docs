@@ -7,7 +7,7 @@
   background-color: #000855;
   color: white;
   flex: 1;
-  padding: 4rem 0;
+  padding: 1rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -15,11 +15,19 @@
 
 @media screen and (max-width: 966px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 1rem;
   }
 }
 
 .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__image {
+  margin: 0 auto;
+  max-width: 650px;
   display: flex;
   align-items: center;
   justify-content: center;
