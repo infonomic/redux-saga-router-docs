@@ -27,8 +27,18 @@
 
 .hero__image {
   margin: 0 auto;
-  max-width: 650px;
+  max-width: 675px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hero__image a {
+  display: 'block';
+  width: 100%;
+  height: 100%;
+}
+
+.hero__image svg {
+  display: 'block'
 }
