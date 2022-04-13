@@ -2,6 +2,8 @@
 
 Documentation for Infonomic's redux-saga-based router.
 
+https://infonomic.github.io/redux-saga-router/
+
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
