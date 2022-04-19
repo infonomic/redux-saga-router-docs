@@ -8,13 +8,15 @@ Routes...
 
 options, params, access
 
+For more information on ```locations.js``` file check [this doc](/docs/locations/)
+
 ```
 import React from 'react'
 
 import * as L from '../../locationTemplates'
 import { sagas } from './sagas'
 
-const ModuleNameList = React.lazy(() => import(./components/ModuleNameList'))
+const ModuleNameList = import(./components/ModuleNameList')
 
 export default [
   {

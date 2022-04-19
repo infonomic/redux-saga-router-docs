@@ -6,6 +6,12 @@ sidebar_position: 5
 
 Dispatch from components
 
+```
+const fn = () => {
+  dispatch(navigate(L.LocationModuleName.locationName(), PUSH))
+}
+```
+
 
 
 
