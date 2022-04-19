@@ -10,9 +10,10 @@ Navigate from links and buttons
 
 ### Router button
 
-```PUSH``` param here is used here to add this route ```locationStack```
+`PUSH` param here is used here to add this route `locationStack`
 
-For more information on ```locationStack``` variable check [this doc](/docs/sagas/#setlocation)
+
+For more information on `locationStack` variable check [this doc](/docs/sagas/#setlocation)
 
 ```
 <Button
@@ -26,12 +27,14 @@ For more information on ```locationStack``` variable check [this doc](/docs/saga
 
 ### Return button
 
-ReturnButton and [ReturnLink](#return-link) are navigating you to previous location in ```locationStack```
+ReturnButton and [ReturnLink](#return-link) are navigating you to previous location in `locationStack`
 
-For more information on ```locationStack``` variable check [this doc](/docs/sagas/#setlocation)
+You can provide `defaultRoute` property to secure component in case if `locationStack` variable will be empty
+
+For more information on `locationStack` variable check [this doc](/docs/sagas/#setlocation)
 
 ```
-<ReturnButton>
+<ReturnButton defaultRoute={L.LocationModuleName.locationName()}>
   Back
 </ReturnButton>
 ```
@@ -40,9 +43,10 @@ For more information on ```locationStack``` variable check [this doc](/docs/saga
 
 ### Router link
 
-```CLEAR``` param here is used here to clear ```locationStack```
+`CLEAR` param here is used here to clear `locationStack`
 
-For more information on ```locationStack``` variable check [this doc](/docs/sagas/#setlocation)
+
+For more information on `locationStack` variable check [this doc](/docs/sagas/#setlocation)
 
 ```
 <RouterLink
@@ -55,18 +59,20 @@ For more information on ```locationStack``` variable check [this doc](/docs/saga
 ```
 ### Return link
 
-ReturnLink and [ReturnButton](#return-button) are navigating you to previous location in ```locationStack```
+ReturnLink and [ReturnButton](#return-button) are navigating you to previous location in `locationStack`
 
-For more information on ```locationStack``` variable check [this doc](/docs/sagas/#setlocation)
+You can provide `defaultRoute` property to secure component in case if `locationStack` variable will be empty
+
+For more information on `locationStack` variable check [this doc](/docs/sagas/#setlocation)
 
 ```
-<ReturnLink>
+<ReturnLink defaultRoute={L.LocationModuleName.locationName()}>
   Back
 </ReturnLink>
 ```
 
 ## Breadcrumbs
-For more information on ```useBreadcrumbs``` hook check [this doc](/hooks.md/#useBreadcrumbs)
+For more information on `useBreadcrumbs` hook check [this doc](/hooks.md/#useBreadcrumbs)
 
 
 ```

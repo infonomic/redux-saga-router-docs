@@ -32,14 +32,14 @@ const currentRoute = useCurrentRoute()
 
 
 ### useBreadcrumbs
-For more information on how to implement ```useBreadcrumbs()``` check [this doc](/components.md/#breadcrumbs)
+For more information on how to implement `useBreadcrumbs()` check [this doc](/components.md/#breadcrumbs)
 
 ```
 const breadcrumbs = useBreadcrumbs()
 ```
 
 ### useIsActive
-For more information on ```to``` and ```exact``` props check [this doc](/components.md/)
+For more information on `to` and `exact` props check [this doc](/components.md/)
 
 ```
 const isActive = useIsActive(to, exact) 
