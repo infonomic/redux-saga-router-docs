@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkredux_saga_router=self.webpackChunkredux_saga_router||[]).push([[848],{5745:function(e){e.exports=JSON.parse('{"plugin":{"name":"docusaurus-plugin-content-pages","id":"default"}}')}}]);
