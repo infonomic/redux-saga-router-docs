@@ -4,18 +4,16 @@ sidebar_position: 4
 
 # Sagas
 
-Configure sagas
+Since the router is saga-based, it makes sense to define sagas for router targets and api requests.
 
-Call router setLocation and navigate from a saga
-
-Our router provides two ways of navigation. You can use ```setLocation``` or ```navigate```
+The router provides two ways of navigation. You can use `setLocation` or `navigate`
 
 
 ### setLocation
 
-```setLocation``` keep history of locations in ```locationStack``` variable that can be manipulated throw ```CLEAR``` and ```PUSH``` params provided as params to navigation component. But it will not run any saga on view mount. 
+`setLocation` stores the location in the `locationStack` current location. It accepts `CLEAR` and `PUSH` params that determine whether the new location will replace the current location stack, or be added to it. `setLocation` will ignore any router configured sagas. 
 
-For more information on how to use```CLEAR``` and ```PUSH``` props check [this doc](/docs/components)
+For more information on how to use `CLEAR` and `PUSH` props check [this doc](/docs/components)
 
 ```
 * fetchList({ payload: { to, mode } }) {
@@ -39,7 +37,7 @@ For more information on how to use```CLEAR``` and ```PUSH``` props check [this d
 
 ### navigate
 
-```navigate``` is used when you need to run init saga on component mount.
+`navigate` is identical to `setLocation` above, but will also  call and router configured sagas.
 
 ```
 * destroy({ payload: { id, data } }) {

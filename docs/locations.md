@@ -4,9 +4,11 @@ sidebar_position: 2
 
 # Locations
 
-## Locations file example
+Location templates including paths and parameters are defined separately from routes.
 
-So for this structure ...
+## Example
+
+So for the following components...
 
 ```
 ModuleFolder
@@ -14,7 +16,7 @@ ModuleFolder
 |__ModuleNameShow.js
 ```
 
-... locations file will look like that
+... the location definitions will look like (although the components above are not referenced here - see the routes documentation)
 
 ```
 export default {

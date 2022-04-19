@@ -4,11 +4,9 @@ sidebar_position: 3
 
 # Routes
 
-Routes...
+Route definitions combine location templates, with components and route options, including an optional initial saga.
 
-options, params, access
-
-For more information on ```locations.js``` file check [this doc](/docs/locations/)
+For more information on `locations.js` file check [this doc](/docs/locations/)
 
 ```
 import React from 'react'
