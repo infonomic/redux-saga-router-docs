@@ -9,7 +9,7 @@ const config = {
   title: 'Infonomic - Redux-Saga Router',
   tagline: 'A Redux-Saga-based router for React.',
   url: 'https://infonomic.github.io',
-  baseUrl: '/redux-saga-router/',
+  baseUrl: '/redux-saga-router-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
