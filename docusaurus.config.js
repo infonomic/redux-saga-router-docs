@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'infonomic', // Usually your GitHub org/user name.
-  projectName: 'redux-saga-router', // Usually your repo name.
+  projectName: 'redux-saga-router-docs', // Usually your repo name.
   trailingSlash: false,
 
   presets: [
