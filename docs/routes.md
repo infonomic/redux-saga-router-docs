@@ -1,20 +1,19 @@
 ---
 sidebar_position: 3
+title: Routes
 ---
-
-# Routes
 
 Route definitions combine location templates, with components and route options, including an optional initial saga.
 
 For more information on `locations.js` file check [this doc](/docs/locations/)
 
-```
+```jsx
 import React from 'react'
 
 import * as L from '../../locationTemplates'
 import { sagas } from './sagas'
 
-const ModuleNameList = import(./components/ModuleNameList')
+const ModuleNameList = import('./components/ModuleNameList')
 
 export default [
   {

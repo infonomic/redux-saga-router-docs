@@ -1,19 +1,18 @@
 ---
 sidebar_position: 6
+title: Hooks
 ---
-
-# Hooks
 
 Available hooks
 
 
 ### useCurrentLocation
-```
+```js
 const location = useCurrentLocation()
 ```
 
 ### useLocationStack
-```
+```js
 const locationStack = useLocationStack()
 ```
 
@@ -21,27 +20,25 @@ const locationStack = useLocationStack()
 
 This hook is used to get dynamic params from url
 
-```
+```js
 const { param1, param2 } = useParams()
 ```
 
 ### useCurrentRoute
-```
+```js
 const currentRoute = useCurrentRoute()
 ```
-
-
 ### useBreadcrumbs
 For more information on how to implement ```useBreadcrumbs()``` check [this doc](/components.md/#breadcrumbs)
 
-```
+```js
 const breadcrumbs = useBreadcrumbs()
 ```
 
 ### useIsActive
 For more information on ```to``` and ```exact``` props check [this doc](/components.md/)
 
-```
+```js
 const isActive = useIsActive(to, exact) 
 ```
 

@@ -1,8 +1,7 @@
 ---
 sidebar_position: 7
+title: Components
 ---
-
-# Components
 
 Navigate from links and buttons
 
@@ -14,7 +13,7 @@ Navigate from links and buttons
 
 For more information on ```locationStack``` variable check [this doc](/docs/sagas/#setlocation)
 
-```
+```jsx
 <Button
   component={RouterButton}
   mode={PUSH}
@@ -30,7 +29,7 @@ ReturnButton and [ReturnLink](#return-link) are navigating you to previous locat
 
 For more information on ```locationStack``` variable check [this doc](/docs/sagas/#setlocation)
 
-```
+```jsx
 <ReturnButton>
   Back
 </ReturnButton>
@@ -44,7 +43,7 @@ For more information on ```locationStack``` variable check [this doc](/docs/saga
 
 For more information on ```locationStack``` variable check [this doc](/docs/sagas/#setlocation)
 
-```
+```jsx
 <RouterLink
   to={L.LocationModuleName.locationName()}
   mode={CLEAR} 
@@ -59,7 +58,7 @@ ReturnLink and [ReturnButton](#return-button) are navigating you to previous loc
 
 For more information on ```locationStack``` variable check [this doc](/docs/sagas/#setlocation)
 
-```
+```jsx
 <ReturnLink>
   Back
 </ReturnLink>
@@ -69,7 +68,7 @@ For more information on ```locationStack``` variable check [this doc](/docs/saga
 For more information on ```useBreadcrumbs``` hook check [this doc](/hooks.md/#useBreadcrumbs)
 
 
-```
+```jsx
 function Breadcrumbs() {
   const breadcrumbs = useBreadcrumbs()
   const theme = useTheme()
