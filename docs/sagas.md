@@ -1,8 +1,7 @@
 ---
 sidebar_position: 4
+title: Sagas
 ---
-
-# Sagas
 
 Since the router is saga-based, it makes sense to define sagas for router targets and api requests.
 
@@ -15,7 +14,7 @@ The router provides two ways of navigation. You can use `setLocation` or `naviga
 
 For more information on how to use `CLEAR` and `PUSH` props check [this doc](/docs/components)
 
-```
+```js
 * fetchList({ payload: { to, mode } }) {
   const { query: params } = to
 
@@ -39,7 +38,7 @@ For more information on how to use `CLEAR` and `PUSH` props check [this doc](/do
 
 `navigate` is identical to `setLocation` above, but will also  call and router configured sagas.
 
-```
+```js
 * destroy({ payload: { id, data } }) {
     yield put(mutations.setLoading())
     try {

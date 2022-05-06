@@ -1,24 +1,17 @@
 ---
 sidebar_position: 2
+title: Locations
 ---
 
-# Locations
-
 Location templates including paths and parameters are defined separately from routes.
-
 ## Example
-
-So for the following components...
-
 ```
-ModuleFolder
-|__ModuleNameList.js
-|__ModuleNameShow.js
+ └── ModuleFolder
+     ├── ModuleNameList.js
+     └── ModuleNameShow.js
 ```
 
-... the location definitions will look like (although the components above are not referenced here - see the routes documentation)
-
-```
+```js
 export default {
   list: createLocationTemplate({
     name: 'module-name/list',
