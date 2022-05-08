@@ -2,11 +2,15 @@
 
 ![a router's journey through space](https://raw.githubusercontent.com/infonomic/redux-saga-router-docs/main/router.svg)
 
-Documentation for Infonomic's redux-saga-based router.
+Documentation for Infonomic's redux-saga-based router. 
 
-https://github.com/infonomic/redux-saga-router
+The docs are available here...
 
 https://infonomic.github.io/redux-saga-router-docs/
+
+The actual project repo, including lib and boilerplate app can be found here...
+
+https://github.com/infonomic/redux-saga-router
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
