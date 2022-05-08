@@ -1,4 +1,4 @@
-# Infonomic -Redux-Sage Router
+# Redux-Saga Router For React Docs
 
 ![a router's journey through space](https://raw.githubusercontent.com/infonomic/redux-saga-router-docs/main/router.svg)
 
