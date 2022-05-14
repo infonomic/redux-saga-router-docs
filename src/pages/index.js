@@ -15,7 +15,7 @@ function HomepageHeader() {
         <h1 className="hero__title">Redux-Saga Router</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.hero__image}>
-          <Link to="/docs/introduction">
+          <Link to="/docs/home">
             <RouterImage/>
           </Link>
         </div>
