@@ -6,11 +6,11 @@ title: Home
 
 We didn't indent to build a router for React. There are lots of other great projects and approaches out there, including of course - [React Router](https://reactrouter.com/).
 
-We started work on our own router at a time when we were just getting up to speed with both React and Redux. We liked [React Redux](https://react-redux.js.org/) a lot, and are slowly shepherding our actions and reducers into an 'event store'-style state management system.
+We started work on our router at a time when we were just getting up to speed with both React and Redux. We liked [React Redux](https://react-redux.js.org/) a lot, and are slowly shepherding our actions and reducers into an 'event store'-style state management system.
 
-Something that appeared very early in our React journey, was a desire to interact with our API, fetch data, send messages, etc., as well as mutate our store, as early as possible in the React component lifecycle - ideally before render, and well before 'useEffect'. 
+Something that appeared very early in our React journey, was a desire to interact with our API, fetch data, send messages, etc., as well as mutate our store, as early as possible in the React component lifecycle - ideally before render, and well before [useEffect](https://reactjs.org/docs/hooks-effect.html). 
 
-We discovered both [Redux Thunk](https://github.com/reduxjs/redux-thunk) and [Redux-Saga](https://redux-saga.js.org/) at about the same time, and while we could have used either, we settled on Redux Saga as our 'side effect manager' for what seemed like valid reasons then and now.
+We discovered both [Redux Thunk](https://github.com/reduxjs/redux-thunk) and [Redux-Saga](https://redux-saga.js.org/) at about the same time, and while we could have used either, we settled on Redux-Saga as our 'side effect manager' for what seemed like valid reasons then and now.
 
 And so after all of the above, our router was born, with what I suppose is its one defining feature - and that is the ability configure routes with an action that is dispatched to Redux (and Redux-Saga) - *before* the components associated with those routes begin their 'lifecycle phases'.
 
