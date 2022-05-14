@@ -18,7 +18,7 @@ We were also inspired by other frameworks, like Angular and [Vue.js](https://vue
 
 The docs and code examples are far from perfect. And we don't feel confident enough yet to release any of this as a package. We've instead created an example project that includes the router module here at https://github.com/infonomic/redux-saga-router 
 
-We'd also be super grateful for any feedback, thoughts, suggestions, and even pull requests! if you find any of this interesting or useful.
+We'd be super grateful for feedback, thoughts, suggestions, and even pull requests! if you find any of this interesting or useful.
 
 Happy routing!
 
