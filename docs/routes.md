@@ -1,9 +1,11 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 title: Routes
 ---
 
 Route definitions combine location templates, with components and route options, including an optional initial saga.
+
+Note that the default layout defined in the RouterView will be used unless specified by the `layout` option of the router configuration.
 
 For more information on `locations.js` file check [this doc](/docs/locations/)
 
@@ -20,7 +22,7 @@ export default [
     template: L.ModuleName.list, // Location name defined in locations.js for this module
     title: 'Module Name',
     requiresAuth: true, // Access option
-    saga: sagas.fetchList, // Saga provided here will be fired on component mount. Check next section for more info about sagas
+    saga: sagas.fetchList, // A Saga provided here will be dispatched on route navigate. Check next section for more info about sagas
     components: {
       main: ModuleNameList, // Component that will be rendered under this route
     },

@@ -1,21 +1,19 @@
 ---
-sidebar_position: 1
-title: Introduction
+sidebar_position: 3
+title: Getting Started
 ---
-## Conceptual Overview
 
-![Router Overview](/img/saga-redux-router-overview.svg)
+## Getting Started
 
-## Getting Started with Example
+Our notes below describe starting a new React project with our router. The router module and a working boilerplate application is available here... https://github.com/infonomic/redux-saga-router  
 
-<!-- ### Initialization -->
-<!-- Before we started, you might need install [yarn](https://github.com/yarnpkg/yarn/) and create a react app. Shown in the snipped below. -->
-First, install [yarn](https://github.com/yarnpkg/yarn/) and create a react app.
-```
-$ npx create-react-app [project-name]
-```
+Assuming you have everything you need to start a React App like [Create React App](https://github.com/facebook/create-react-app) then go ahead and start initialize a new React application.
+
+We're using classic Yarn here in our example, but of course npm would work fine as well.
+
 ### Install required dependencies
-After creating your project, uses command cd to go inside the directory and install dependencies then yarn start
+After creating your project, install the following dependencies then start React.
+
 ```bash
 $ cd [project-name]
 $ yarn add redux react-redux redux-saga reselect immer lodash
@@ -25,13 +23,9 @@ $ yarn start
 Open a browser [http://localhost:3000/](http://localhost:3000/). 
 It will render React Logo and display a message "Edit <code>src/App.js</code> and save to reload." the page.
 
-<!-- ### Install required dependencies
-Utilize the command below to install dependencies
-```bash
-$ yarn add redux react-redux redux-saga reselect immer lodash
-``` -->
+
 ### Import Infonomic's Redux-saga Router
-Download and place the **Infonomic's Redux-saga Router** folder to `src/lib`.
+Download and place the `redux-saga-router` folder to `src/lib`.
 ```git
  ├── README.md
  ├── package.json
@@ -50,7 +44,7 @@ Download and place the **Infonomic's Redux-saga Router** folder to `src/lib`.
  └── yarn.lock
 ```
 
-### Create Root Reducer with router
+### Create the Root Reducer with router
 
 Create a rootReducer.js at `src/store/rootReducer.js` and import `createRouterReducer` from `../lib/redux-saga-router`
 After importing createRouterReducer file, write the rootReducer and export the root reducer.
@@ -91,7 +85,7 @@ const Hompage = () => (
 export default Hompage
 ```
 
-You also can create multiple templates. For instance, we will have two location templates files HomePage.js and NewsPage.js
+You can create multiple templates. For instance, we will have two location templates files HomePage.js and NewsPage.js
 ```js title="src/modules/news/location.js"
 import { createLocationTemplate } from '../../lib/redux-saga-router'
 
@@ -174,9 +168,10 @@ export default prepareRoutes([...homeRoutes, ...newsRoutes])
 
 ```
 
-### Create Main Layout
+### Create a Main Layout
 
 Create a main layout file at `src/ui/MainLayout.js` by using `RouterView` from `redux-saga-router`
+
 ```jsx title="src/ui/MainLayout.js"
 import { CLEAR, RouterLink, RouterView } from '../lib/redux-saga-router'
 import * as L from '../locationTemplates'
@@ -214,11 +209,12 @@ export default MainLayout
 ```
 
 :::tip Note 
-For more information on `RouterLink` file check this [Link](/docs/components#links).
+For more information on `RouterLink` see [Link](/docs/components#links).
 :::
 
 
 After completed creating all necessary files, add routes into the rootReducer.js
+
 ```git title="src/store/rootReducer.js"
   import { combineReducers } from 'redux'
   import { createRouterReducer } from '../lib/redux-saga-router'
@@ -233,7 +229,7 @@ After completed creating all necessary files, add routes into the rootReducer.js
 ```
 
 
-### Creates Redux Store and Redux Saga Middleware
+### Configure Redux Store and Redux Saga Middleware
 Create index.js file at `src/store/configureStore.js` <br/>
 import the followings<br/>
 
@@ -275,7 +271,7 @@ export default (routes) =>
 
 ```
 
-### Adding provider the Redux Store to React
+### Add the Redux Store Provider to React
 After store and saga is created, add `<Provider>` around the application in `src/index.js` and pass store as a prop.
 
 ```git title="src/index.js"

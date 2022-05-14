@@ -1,12 +1,36 @@
 ---
-sidebar_position: 4
+sidebar_position: 6
 title: Sagas
 ---
 
 Since the router is saga-based, it makes sense to define sagas for router targets and api requests.
 
-The router provides two ways of navigation. You can use `setLocation` or `navigate`
+### navigate
 
+`navigate` initiates a router request. It accepts `CLEAR` and `PUSH` params that determine whether the new location will replace the current location in the location stack, or added to the location stack.
+
+It can be called from within a react component handler as...
+
+```js
+  const handleListWidgets = value => {
+    dispatch(navigate(L.Widgets.list(null, query)))
+  }
+```
+
+Or from within a saga as...
+
+```js
+* destroy({ payload: { id, data } }) {
+    yield put(mutations.setLoading())
+    try {
+      yield call(apiRequest, { method: 'delete', url: `/backend-endpoint/${id}` })
+      yield put(mutations.mutation({ id }))
+      yield put(navigate(L.LocationModuleName.locationName()))
+    } catch (error) {
+      // Error handling
+    }
+  },
+```
 
 ### setLocation
 
@@ -32,23 +56,6 @@ For more information on how to use `CLEAR` and `PUSH` props check [this doc](/do
     // Error handling
   }
 },
-```
-
-### navigate
-
-`navigate` is identical to `setLocation` above, but will also  call and router configured sagas.
-
-```js
-* destroy({ payload: { id, data } }) {
-    yield put(mutations.setLoading())
-    try {
-      yield call(apiRequest, { method: 'delete', url: `/backend-endpoint/${id}` })
-      yield put(mutations.mutation({ id }))
-      yield put(navigate(L.LocationModuleName.locationName()))
-    } catch (error) {
-      // Error handling
-    }
-  },
 ```
 
 
