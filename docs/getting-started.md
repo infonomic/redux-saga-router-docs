@@ -77,13 +77,15 @@ And HomePage component `src/modules/home/components/HomePage.js`
 ```jsx title="src/modules/home/components/HomePage.js"
 import React from 'react'
 
-const Hompage = () => (
+function Homepage() {
+  return (
     <div>
-        <h1>Home Page</h1>
+      <h1>Home Page</h1>
     </div>
-)
+  )
+}
 
-export default Hompage
+export default Homepage
 ```
 
 You can create multiple templates. For instance, we will have two location templates files HomePage.js and NewsPage.js
@@ -101,11 +103,11 @@ export default {
 ```jsx title="src/modules/news/components/NewsPage.js"
 import React from 'react'
 
-const NewsPage = () => (
+function NewsPage() {
     <div>
         <h1>News Page</h1>
     </div>
-)
+}
 
 export default NewsPage
 ```
