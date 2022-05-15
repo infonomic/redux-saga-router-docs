@@ -7,7 +7,7 @@ title: Getting Started
 
 Our notes below describe starting a new React project with our router. The router module and a working boilerplate application is available here... https://github.com/infonomic/redux-saga-router  
 
-Assuming you have everything you need to start a React App like [Create React App](https://github.com/facebook/create-react-app) then go ahead and start initialize a new React application.
+Assuming you have everything you need to start a React App like [Create React App](https://github.com/facebook/create-react-app) then go ahead and initialize a new React application.
 
 We're using classic Yarn here in our example, but of course npm would work fine as well.
 
@@ -25,7 +25,8 @@ It will render React Logo and display a message "Edit <code>src/App.js</code> an
 
 
 ### Import Infonomic's Redux-saga Router
-Download and place the `redux-saga-router` folder to `src/lib`.
+
+Download the router module from https://github.com/infonomic/redux-saga-router and place the `redux-saga-router` folder in `src/lib`.
 ```git
  ├── README.md
  ├── package.json
@@ -44,7 +45,7 @@ Download and place the `redux-saga-router` folder to `src/lib`.
  └── yarn.lock
 ```
 
-### Create the Root Reducer with router
+### Create a Root Reducer with router
 
 Create a rootReducer.js at `src/store/rootReducer.js` and import `createRouterReducer` from `../lib/redux-saga-router`
 After importing createRouterReducer file, write the rootReducer and export the root reducer.
