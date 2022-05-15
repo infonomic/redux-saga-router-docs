@@ -7,7 +7,7 @@ Since the router is saga-based, it makes sense to define sagas for router target
 
 ### navigate
 
-`navigate` initiates a router request. It accepts `CLEAR` and `PUSH` params that determine whether the new location will replace the current location in the location stack, or added to the location stack.
+`navigate` is a redux action (defined in `redux/actions.js`). There is a saga that will respond to this action - `handleNavigation` - which checks for a configured saga on the route - and if found, will `call` it. It accepts `CLEAR` and `PUSH` params that determine whether the new location will replace the current location in the location stack, or is added to the location stack. Note that if a configured saga is found and called, it will be up to the saga to complete the route change by calling `setLocation` (see below), to update `window.history`.
 
 It can be called from within a react component handler as...
 
@@ -34,7 +34,7 @@ Or from within a saga as...
 
 ### setLocation
 
-`setLocation` stores the location in the `locationStack` current location. It accepts `CLEAR` and `PUSH` params that determine whether the new location will replace the current location stack, or be added to it. `setLocation` will ignore any router configured sagas. 
+`setLocation` is a redux action (defined in `redux/actions.js`). There is both a saga - `updateLocation`, and a reducer that will respond to this action. The saga will update the current `window.history` with requested route path, and the reducer will decide whether to replace or push the location onto the current location stack based on the `CLEAR` and `PUSH` params. `setLocation` will ignore any router configured sagas. 
 
 For more information on how to use `CLEAR` and `PUSH` props check [this doc](/docs/components)
 
