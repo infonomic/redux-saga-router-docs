@@ -14,7 +14,7 @@ Something that appeared very early in our React journey, was a desire to interac
 
 We discovered both [Redux Thunk](https://github.com/reduxjs/redux-thunk) and [Redux-Saga](https://redux-saga.js.org/) at about the same time, and while we could have used either, we settled on Redux-Saga as our 'side effect manager' for what seemed like valid reasons then and now.
 
-And so after all of the above, our router was born, with what I suppose is its one defining feature - and that is the ability configure routes with an action that is dispatched to Redux (and Redux-Saga) - *before* the components associated with those routes begin their 'lifecycle phases'.
+And so after all of the above, our router was born, with what I suppose is its defining feature - and that is the ability configure routes with an action that is dispatched to Redux (and Redux-Saga) - *before* the components associated with those routes begin their 'lifecycle phases'.
 
 We were also inspired by other frameworks, like Angular and [Vue.js](https://vuejs.org/), and so the core 'presentation' object for our router is the RouterView component, which behaves somewhat (but not exactly) like a Vue.js 'slot'.
 
