@@ -7,7 +7,7 @@ Since the router is saga-based, it makes sense to define sagas for router target
 
 ### navigate
 
-`navigate` is a redux action (defined in `redux/actions.js`). There is a saga that will respond to this action - `handleNavigation` - which checks for a configured saga on the route - and if found, will `call` it. It accepts `CLEAR` and `PUSH` params that determine whether the new location will replace the current location in the location stack, or is added to the location stack. Note that if a configured saga is found and called, it will be up to the saga to complete the route change by calling `setLocation` (see below), to update `window.history`.
+`navigate` is a redux action (defined in `redux/actions.js`). There is a saga that will respond to this action - `handleNavigation` - which checks for a configured saga on the route - and if found, will `call` it. It accepts `CLEAR` and `PUSH` params that determine whether the new location will replace the current location in the location stack, or is added to the location stack. Note that if a configured saga is found and called, it will be up to the saga to complete the route change by calling `setLocation` (see below), thereby updating `window.history` and the location stack.
 
 It can be called from within a react component handler as...
 
