@@ -2,6 +2,8 @@
 sidebar_position: 1
 title: Home
 ---
+
+![Redux-Saga Router](/img/router.svg)
 ## Introduction
 
 We didn't indent to build a router for React. There are lots of other great projects and approaches out there, including of course - [React Router](https://reactrouter.com/).
