@@ -7,6 +7,8 @@ Route definitions combine location templates, with components and route options,
 
 Note that the default layout defined in the RouterView will be used unless specified by the `layout` option of the router configuration.
 
+Also note that the entire route configuration object and all its properties, are available at any time to React via 'useCurrentRoute' hook. For example the route configuration could include an configured 'icon' that might be shown in a menu or breadcrumb collection etc.
+
 For more information on `locations.js` file check [this doc](/docs/locations/)
 
 ```jsx
