@@ -3,9 +3,9 @@ sidebar_position: 3
 title: Locations
 ---
 
-Routes in the router are configured by creating a both a location template, and a [route](/docs/routes) configuration object.
+Routes in the router are configured by creating both a location template and a [route](/docs/routes) configuration object.
 
-Location templates define the path to the route, with any optional param.
+Location templates define the path to the route, with any optional parameters.
 
 ## Example
 
