@@ -13,7 +13,7 @@ So we need one action and router saga to tell redux-saga to look for, and run a 
 
 ### navigate
 
-`navigate` is a redux action (defined in `redux/actions.js`). There is just one saga listening for this action - `handleNavigation` - which checks for a configured saga on the route - and if found, will `call` it. It accepts `CLEAR` and `PUSH` params that determine whether the new location will replace the current location in the location stack, or is added to the location stack. Note that if a configured saga is found and called, it will be up to that saga to complete the route change by optionally calling `setLocation` (see below), thereby updating the state of the location stack and `window.history`.
+`navigate` is a redux action (defined in `redux/actions.js`. It's actually an 'action helper'). There is just one saga listening for this action - `handleNavigation` - which checks for a configured saga on the route - and if found, will `call` it. It accepts `CLEAR` and `PUSH` params that determine whether the new location will replace the current location in the location stack, or is added to the location stack. Note that if a configured saga is found and called, it will be up to that saga to complete the route change by optionally calling `setLocation` (see below), thereby updating the state of the location stack and `window.history`.
 
 `navigate` accepts a [location template](/docs/locations) (with options) as an argument, and can be called from within a react component handler as...
 
@@ -40,7 +40,7 @@ Or from within a saga as...
 
 ### setLocation
 
-`setLocation` is a redux action (defined in `redux/actions.js`). There is both a saga - `updateLocation`, and a reducer that will respond to this action. The saga will update the current `window.history` with requested route path, and the reducer will update the location stack state, deciding whether to replace or push the location onto the current location stack based on the `CLEAR` and `PUSH` params. `setLocation` will ignore any router configured sagas (see `navigate` above). 
+`setLocation` is a redux action (defined in `redux/actions.js`. It's actually an action helper). There is both a saga - `updateLocation`, and a reducer that will respond to this action. The saga will update the current `window.history` with requested route path, and the reducer will update the location stack state, deciding whether to replace or push the location onto the current location stack based on the `CLEAR` and `PUSH` params. `setLocation` will ignore any router configured sagas (see `navigate` above). 
 
 For more information on how to use `CLEAR` and `PUSH` props check [this doc](/docs/components)
 
