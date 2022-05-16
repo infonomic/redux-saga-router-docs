@@ -19,7 +19,7 @@ Location templates define the path to the route, with any optional parameters.
   
 ```
 
-```js title="src/modules/ModuleFolder/location.js
+```js title=src/modules/ModuleFolder/location.js
 export default {
   list: createLocationTemplate({
     name: 'module-name/list',
