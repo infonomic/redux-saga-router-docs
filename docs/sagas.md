@@ -27,10 +27,10 @@ Or from within a saga as...
 
 ```js
 * destroy({ payload: { id, data } }) {
-    yield put(mutations.setLoading())
+    yield put(mutations.destroyStarted())
     try {
       yield call(apiRequest, { method: 'delete', url: `/backend-endpoint/${id}` })
-      yield put(mutations.mutation({ id }))
+      yield put(mutations.destroySucceeded({ id }))
       yield put(navigate(L.LocationModuleName.locationName()))
     } catch (error) {
       // Error handling
@@ -47,17 +47,15 @@ For more information on how to use `CLEAR` and `PUSH` props check [this doc](/do
 ```js
 * fetchList({ payload: { to, mode } }) {
   const { query: params } = to
-
-  yield put(mutations.setLoading())
-  yield put(setLocation(to, mode))
-
+  yield put(mutations.listStarted())
   try {
     const response = yield call(apiRequest, {
       method: 'get',
       url: '/backend-endpoint',
       params,
     })
-    yield put(mutations.mutation(response))
+     yield put(mutations.listSucceeded(response))
+     yield put(setLocation(to, mode))
   } catch (error) {
     // Error handling
   }
