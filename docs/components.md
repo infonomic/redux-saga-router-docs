@@ -3,7 +3,19 @@ sidebar_position: 7
 title: Components
 ---
 
-There is an example RouterLink component in the router folder under components here...
+[draft: better description of RouterView and other components]
+
+The heart of the router is the `RouterView` component. RouterViews are 'named' and can be nested.
+
+```jsx
+return (
+  <RouterView name="main" />
+)
+```        
+
+The name of the router view 'matches' the name defined under the components configuration property of the [route](/docs/routes) configuration object.
+
+There is also an example RouterLink component in the router folder under components here...
 
 https://github.com/infonomic/redux-saga-router/tree/main/src/lib/redux-saga-router/components
 
