@@ -25,7 +25,7 @@ For more information on `locations.js` file check [this doc](/docs/locations/)
 ```
 
 
-```js title="src/modules/ModuleFolder/routes.js
+```js title=src/modules/ModuleFolder/routes.js
 import React from 'react'
 
 import * as L from '../../locationTemplates'
