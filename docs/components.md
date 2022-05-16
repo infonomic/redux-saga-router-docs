@@ -1,9 +1,15 @@
 ---
-sidebar_position: 8
+sidebar_position: 7
 title: Components
 ---
 
-Navigate from links and buttons
+There is an example RouterLink component in the router folder under components here...
+
+https://github.com/infonomic/redux-saga-router/tree/main/src/lib/redux-saga-router/components
+
+Below are suggested examples of other components you may wish to create on a per-project basis.
+
+[draft: more examples]
 
 ## Buttons
 

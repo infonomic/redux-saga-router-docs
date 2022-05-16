@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 title: Locations
 ---
 
@@ -9,7 +9,7 @@ Location templates define the path to the route, with any optional param.
 
 ## Example
 
-```git
+```git 
 
   ├── ModuleFolder
   │    └── components
@@ -19,7 +19,7 @@ Location templates define the path to the route, with any optional param.
   
 ```
 
-```js
+```js title="src/modules/ModuleFolder/location.js
 export default {
   list: createLocationTemplate({
     name: 'module-name/list',

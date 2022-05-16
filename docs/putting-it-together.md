@@ -1,11 +1,13 @@
 ---
-sidebar_position: 3
-title: Getting Started
+sidebar_position: 8
+title: Putting it Together
 ---
 
-## Getting Started
+## Create the App
 
-Our notes below describe starting a new React project with our router. The router module and a working boilerplate application is available here... https://github.com/infonomic/redux-saga-router  
+The router module and a working boilerplate application is available here... https://github.com/infonomic/redux-saga-router.
+
+The notes below describe starting a new React project with the router. 
 
 Assuming you have everything you need to start a React App like [Create React App](https://github.com/facebook/create-react-app) then go ahead and initialize a new React application.
 
@@ -63,6 +65,7 @@ export default rootReducer
 ### Create Location template with example page components
 
 Add location template file by creating a location.js `src/modules/home/location.js`
+
 ```js title="src/modules/home/location.js"
 import { createLocationTemplate } from '../../lib/redux-saga-router'
 

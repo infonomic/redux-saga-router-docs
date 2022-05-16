@@ -1,10 +1,11 @@
 ---
-sidebar_position: 7
+sidebar_position: 6
 title: Hooks
 ---
 
-Available hooks
+The route library has a suite of convenience hooks, listed below.
 
+[draft: more examples]
 
 ### useCurrentLocation
 ```js
