@@ -5,7 +5,7 @@ title: Sagas
 
 The router is saga-based, and relies on two sagas and a reducer.
 
-The process of navigating to a new route involves both running an optionally configured saga (present on the [route](/docs/routes) configuration object), and then optionally updating the currentLocation and locationStack state in the store - but critically, the configured saga (if present) must run before the store is updated, and must have the ability to decide to cancel the navigation, or redirect, or other things. 
+The process of navigating to a new route involves both running an optionally configured saga (present on the [route](/docs/routes) configuration object), and then optionally updating the currentLocation and locationStack state in the store. Critically, the configured saga (if present) must run before the store is updated, and must have the ability to decide to cancel the navigation, or redirect etc. 
 
 We must also never allow one navigation to start before another has ended.  That behavior is built-in to the redux-saga 'takeLeading' watcher, which requires that we start the saga by dispatching an action, not calling it directly.
 

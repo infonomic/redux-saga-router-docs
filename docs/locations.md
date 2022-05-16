@@ -10,16 +10,14 @@ Location templates define the path to the route, with any optional parameters.
 ## Example
 
 ```git 
-
-  ├── ModuleFolder
-  │    └── components
-  │    │   └── ModuleNameList.js
-  │    │   └── ModuleNameShow.js
- +│    └── locations.js
-  
+ ├── ModuleFolder
+ │    └── components
+ │    │   └── ModuleNameList.js
+ │    │   └── ModuleNameShow.js
++│    └── locations.js
 ```
 
-```js title=src/modules/ModuleFolder/location.js
+```js title=src/modules/ModuleFolder/locations.js
 export default {
   list: createLocationTemplate({
     name: 'module-name/list',
