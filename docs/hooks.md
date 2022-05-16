@@ -3,7 +3,7 @@ sidebar_position: 6
 title: Hooks
 ---
 
-The route library has a suite of convenience hooks, listed below.
+The router library has a suite of convenience hooks, listed below.
 
 [draft: more examples]
 
