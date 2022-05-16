@@ -42,7 +42,7 @@ Or from within a saga as...
 
 `setLocation` is a redux action (defined in `redux/actions.js`. It's actually an action helper). There is both a saga - `updateLocation`, and a reducer that will respond to this action. The saga will update the current `window.history` with the requested route path, and the reducer will update the location stack state, deciding whether to replace or push the location onto the current location stack based on the `CLEAR` and `PUSH` params. `setLocation` will ignore any router configured sagas (see `navigate` above). 
 
-Most importantly, once `setLocation` has been dispatched and router state updated, the `RouterView` component will re-render - including any configured components defined in the router configuration object - which is of course the ultimate goal of the route change. 
+Most importantly, once `setLocation` has been dispatched and router state updated, the `RouterView` component will re-render - including any configured React components defined in the router configuration object - which is of course the ultimate goal of the route change. 
 
 For more information on how to use `CLEAR` and `PUSH` props check [this doc](/docs/components)
 
