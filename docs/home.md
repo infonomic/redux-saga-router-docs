@@ -8,7 +8,7 @@ title: Home
 
 We didn't indent to build a router for React. There are lots of other great projects and approaches out there, including of course - [React Router](https://reactrouter.com/).
 
-We started work on our router at a time when we were just getting up to speed with both React and Redux. [React Redux](https://react-redux.js.org/) isn't the only approach to state management, and it has it's own [pros and cons](https://itnext.io/life-after-redux-21f33b7f189e) - but overall it's a great tool and services our current needs well.
+We started work on our router at a time when we were just getting up to speed with both React and Redux. [React Redux](https://react-redux.js.org/) isn't the only approach to state management, and it has it's own [pros and cons](https://itnext.io/life-after-redux-21f33b7f189e) - but overall it's a great tool and serves our current needs well.
 
 Something that appeared very early in our React journey, was a desire to interact with our API, fetch data, send messages, perform any asynchronous tasks etc., as well as mutate our store as early as possible in the React component lifecycle - ideally before render, and well before [useEffect](https://reactjs.org/docs/hooks-effect.html). 
 
