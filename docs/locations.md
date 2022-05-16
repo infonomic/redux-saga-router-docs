@@ -3,12 +3,20 @@ sidebar_position: 4
 title: Locations
 ---
 
-Location templates including paths and parameters are defined separately from routes.
+Routes in the router are configured by creating a both a location template, and a [route](/docs/routes) configuration object.
+
+Location templates define the path to the route, with any optional param.
+
 ## Example
-```
- └── ModuleFolder
-     ├── ModuleNameList.js
-     └── ModuleNameShow.js
+
+```git
+
+  ├── ModuleFolder
+  │    └── components
+  │    │   └── ModuleNameList.js
+  │    │   └── ModuleNameShow.js
+ +│    └── locations.js
+  
 ```
 
 ```js

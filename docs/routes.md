@@ -11,6 +11,20 @@ Also note that the entire route configuration object and all its properties, are
 
 For more information on `locations.js` file check [this doc](/docs/locations/)
 
+## Example
+
+```git
+
+  ├── ModuleFolder
+  │    └── components
+  │    │   └── ModuleNameList.js
+  │    │   └── ModuleNameShow.js
+ +│    ├── locations.js
+ +│    └── routes.js
+  
+```
+
+
 ```jsx
 import React from 'react'
 
