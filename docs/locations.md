@@ -30,3 +30,18 @@ export default {
   }),
 }
 ```
+Location templates are used to pass location parameters and query values to `navigate` and `setLocation` [sagas](/docs/sagas).
+
+For example...
+
+```js
+  const handleListWidgets = value => {
+    dispatch(navigate(L.Widgets.list(null, query)))
+  }
+```
+
+```js
+  const handleShowWidget = value => {
+    dispatch(navigate(L.Widgets.show({ id })))
+  }
+```

@@ -11,7 +11,7 @@ We must also never allow one navigation to start before another has ended.  That
 
 So we need one action and router saga to tell redux-saga to look for - and if found, run a router-configured saga, and then if that saga chooses to - a second action to actually update router state.
 
-### navigate
+## navigate
 
 `navigate` is a redux action (defined in `redux/actions.js`. It's actually an 'action helper'). There is just one saga listening for this action - `handleNavigation` - which checks for a configured saga on the route - and if found, will `call` it. It accepts `CLEAR` and `PUSH` params that determine whether the new location will replace the current location in the location stack, or is added to the location stack. Note that if a configured saga is found and called, it will be up to that saga to complete the route change by optionally calling `setLocation` (see below), thereby updating the state of the location stack and `window.history`.
 
@@ -38,7 +38,21 @@ Or from within a saga as...
   },
 ```
 
-### setLocation
+Location parameters or query values are passed to the location template for locations (routes) that accept dynamic parameters. For example...
+
+```js
+  const handleListWidgets = value => {
+    dispatch(navigate(L.Widgets.list(null, query)))
+  }
+```
+
+```js
+  const handleShowWidget = value => {
+    dispatch(navigate(L.Widgets.show({ id })))
+  }
+```
+
+## setLocation
 
 `setLocation` is a redux action (defined in `redux/actions.js`. It's actually an action helper). There is both a saga - `updateLocation`, and a reducer that will respond to this action. The saga will update the current `window.history` with the requested route path, and the reducer will update the location stack state, deciding whether to replace or push the location onto the current location stack based on the `CLEAR` and `PUSH` params. `setLocation` will ignore any router configured sagas (see `navigate` above). 
 
